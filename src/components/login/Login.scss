@@ -1,0 +1,76 @@
+.wrapper {
+    
+    height: 100vh;
+    background: linear-gradient(330.42deg, rgba(255, 0, 0, 0.84) 0.73%, #2592FF 94.71%);
+
+    .container {
+
+        $width: 310px;
+
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        *:focus {
+            outline:0;
+        }
+
+        .text-logo {
+            padding-bottom: 1em;
+        }
+
+        .icon-logo {
+            padding: 2em;
+        }
+
+        .skip-btn, .login-btn {
+
+            // For text
+            color: white;
+            font-size: .8em;
+
+            margin-top: 11px;
+            width: $width + 12px;
+            height: 45px;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 5px;
+            border: none;
+
+        }
+
+        .skip-btn {
+            $bg: #00CC52;
+            background: $bg;
+            &:active {
+                background: lighten($bg, 5%);
+            }
+        }
+
+        .login-btn {
+            $bg: #007AFF;
+            background: $bg;
+            &:active {
+                background: lighten($bg, 5%);
+            }
+        }
+
+        .email-inp {
+            margin-top: 1em;
+            background: #FFFFFF;
+            border-radius: 5px;
+            width: $width - 6px;
+            height: 45px;
+            border: 1px solid white;
+            padding-left: 15px;
+        }
+
+        .forgot-lbl {
+            color: white;
+            padding: 10px;
+        }
+
+    }
+
+}
