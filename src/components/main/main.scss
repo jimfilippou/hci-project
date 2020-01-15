@@ -1,0 +1,105 @@
+.wrapper {
+    
+    height: 100vh;
+    background: linear-gradient(135.1deg, rgba(255, 0, 0, 0.84) -64.15%, #2592FF 104.21%);
+
+    p {
+        margin: 0;
+    }
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .topbar {
+
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            color: white;
+
+            .switch {
+                display: flex;
+                align-items: center;
+                padding-left: 1.5em;
+            }
+
+            img {
+                padding: 1em;
+            }
+        }
+
+        .humidity {
+
+            margin-bottom: 2em;
+            display: flex;
+            color: white;
+
+            i {
+                margin-right: 10px;
+            }
+
+        
+        }
+
+        .temperature {
+            display: flex;
+
+            p {
+                text-align: center;
+                color: white;
+                margin-bottom: 1em;
+            }
+
+            .column {
+                flex-direction: column;
+            }
+
+            .column:first-child {
+                margin-right: 2.5em;
+            }
+
+            .column:last-child {
+                margin-left: 2.5em;
+            }
+
+            .circle {
+
+                color: white;
+                font-size: 1.3em;
+
+                border-radius: 100%;
+                background-color: #FF9432;
+                height: 90px;
+                width: 90px;
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .temp-controls {
+                display: flex;
+                .unify {
+                    background: rgba(255, 255, 255, 0.44);
+                    border-radius: 31px;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.button {
+    width: 88px;
+    height: 88px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
