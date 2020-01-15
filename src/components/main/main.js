@@ -160,6 +160,26 @@ function Main() {
                         </div>
                     </div>
                 </div>
+                <div className="timer">
+                    <div className="unify">
+                        <div className="timer-controls-wrapper">
+                            <p>Timer</p>
+                            <div className="outter-parent">
+                                {
+                                    [0, 0, 0].map((value, index) =>
+                                        <div className="column">
+                                            <i class="fas fa-chevron-up fa-2x"></i>
+                                            <h3>00hrs</h3>
+                                            <i class="fas fa-chevron-down fa-2x"></i>
+                                        </div>
+                                    )
+                                }
+
+                            </div>
+                            <div className="start-btn">Start</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

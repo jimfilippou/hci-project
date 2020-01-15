@@ -209,6 +209,59 @@
             color: white
         }
 
+        .timer {
+
+            margin-bottom: 3em;
+            
+            .unify {
+
+                padding-left: 2em;
+                padding-right: 2em;
+                
+                .timer-controls-wrapper {
+                    text-align: center;
+                    color: white;
+                    p {
+                        padding-top: .8em;
+                        margin-bottom: 1em;
+                    }
+                    .start-btn {
+                        $bg: #00CC52;
+                        background: $bg;
+                        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+                        border-radius: 31px;
+                        width: 183px;
+                        height: 41px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 1.5em;
+                        margin-bottom: 1em;
+                        &:active {
+                            background: lighten($bg, 1%);
+                        }
+                    }
+                    .outter-parent {
+                        display: flex;
+                        flex-direction: row;
+                        .column {
+                            display: flex;
+                            flex-direction: column;
+                            &:first-child {
+                                padding-right: 2.5em;
+                            }
+                            &:last-child {
+                                padding-left: 2.5em;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+
     }
 
 }
