@@ -1,6 +1,5 @@
 .wrapper {
     
-    height: 100vh;
     background: linear-gradient(135.1deg, rgba(255, 0, 0, 0.84) -64.15%, #2592FF 104.21%);
 
     p {
@@ -84,14 +83,130 @@
 
             }
 
-            .temp-controls {
-                display: flex;
-                .unify {
-                    background: rgba(255, 255, 255, 0.44);
-                    border-radius: 31px;
-                }
+        }
+
+        .temp-controls {
+
+            .unify:first-child {
+                margin-right: 1.6em;
             }
 
+            .unify:last-child {
+                margin-left: 1.6em;
+            }
+
+            display: flex;
+            flex-direction: row;
+
+            .unify {
+
+                margin-top: 2em;
+
+                .plus, .minus, .swing {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-size: 2em;
+                }
+                
+                .plus {
+                    $bg: #FF7171;
+                    background: $bg;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+                    width: 88px;
+                    height: 88px;
+                    border-radius: 100%;
+                    margin-bottom: 0.5em;
+                    &:active {
+                        background: lighten($bg, 10%);
+                    }
+                }
+                
+                .minus {
+                    $bg: #8195FF;
+                    background: $bg;
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+                    width: 88px;
+                    height: 88px;
+                    border-radius: 100%;
+                    &:active {
+                        background: lighten($bg, 10%);
+                    }
+                }
+
+                .swing {
+                    $bg: #1A295F;
+                    background: $bg;
+                    width: 88px;
+                    height: 88px;
+                    border-radius: 100%;
+                    &:active {
+                        background: lighten($bg, 10%);
+                    }
+                    &:first-child {
+                        margin-bottom: 0.5em;
+                    }
+                }
+
+            }
+
+        }
+
+        .mode-controls {
+            margin-bottom: 2em;
+            .unify {
+                padding-left: 2.5em;
+                padding-right: 2.5em;
+                padding-bottom: 2em ;
+                margin-top: 2em;
+                .mode-elements-wrapper {
+                    text-align: center;
+                    color: white;
+                    p {
+                        margin-bottom: 1em;
+                        margin-top: .5em;
+                    }
+                    .buttons {
+                        display: flex;
+                        .flake, .fire {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                            font-size: 2em;
+                            border-radius: 100%;
+                        }
+                        .flake {
+                            $bg: #8195FF;
+                            background-color: $bg;
+                            margin-right: 0.5em;
+                        }
+                        .fire {
+                            $bg: #FF7171;
+                            background-color: $bg;
+                            margin-left: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .fan-controls {
+            margin-bottom: 2em;
+            .unify {
+                padding-left: 2em;
+                padding-right: 2em;
+                .fan-controls-wrapper {
+                    text-align: center;
+                    p {
+                        padding-top: .8em;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+            width: 290px;
+            color: white
         }
 
     }
@@ -103,3 +218,10 @@
     height: 88px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 }
+
+.unify {
+    background: rgba(255, 255, 255, 0.44);
+    border-radius: 31px;
+    padding: 1em;
+}
+
