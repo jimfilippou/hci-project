@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import logo from '../../assets/images/logo.svg';
 import ac from '../../assets/images/aircondition.svg';
 import './Login.scss';

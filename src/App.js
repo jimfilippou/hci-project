@@ -1,6 +1,6 @@
 import React from 'react';
 // import Login from './components/login/Login';
-import Main from './components/main/main';
+import Main from './components/Main/Main';
 import './core.scss';
 import CTX from './store';
 
