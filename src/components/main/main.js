@@ -8,11 +8,10 @@ import swingDown from '../../assets/images/main/swing/down.svg';
 import FanSlider from '../FanSlider/FanSlider';
 import ACSwitch from '../ACSwitch/ACSwitch';
 import Timer from '../Timer/Timer';
+import ACMode from '../ACMode/ACMode';
 
 // Load styling
 import './Main.scss';
-import ACMode from '../ACMode/ACMode';
-
 
 function Main() {
 
