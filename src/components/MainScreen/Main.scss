@@ -167,28 +167,6 @@
                         margin-bottom: 1em;
                         margin-top: .5em;
                     }
-                    .buttons {
-                        display: flex;
-                        .flake, .fire {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: white;
-                            font-size: 2em;
-                            border-radius: 100%;
-                            transition: all ease-in-out .4s;
-                        }
-                        .flake {
-                            $bg: #8195FF;
-                            background-color: $bg;
-                            margin-right: 0.5em;
-                        }
-                        .fire {
-                            $bg: #FF7171;
-                            background-color: $bg;
-                            margin-left: 0.5em;
-                        }
-                    }
                 }
             }
         }

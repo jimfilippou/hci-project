@@ -43,7 +43,7 @@ function Main() {
                         <p>ON</p>
                     </div>
                     <div>
-                        <img src={anna} />
+                        <img alt="user" src={anna} />
                     </div>
                 </div>
                 <div className="humidity">
@@ -76,10 +76,10 @@ function Main() {
                     </div>
                     <div className="unify">
                         <div className="button swing">
-                            <img src={swingUP} />
+                            <img alt="swing up" src={swingUP} />
                         </div>
                         <div className="button swing">
-                            <img src={swingDown} />
+                            <img alt="swing down" src={swingDown} />
                         </div>
                     </div>
                 </div>

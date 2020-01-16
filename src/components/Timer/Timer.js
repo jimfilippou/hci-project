@@ -12,7 +12,7 @@ export default () => {
 
         setState({
             ...state,
-            [target]: action == 'add' ? state[target] + 1 : state[target] - 1
+            [target]: action === 'add' ? state[target] + 1 : state[target] - 1
         });
 
     }
@@ -20,11 +20,11 @@ export default () => {
     return (
         <div className="outter-parent">
             {
-                Object.keys(state).sort().map((value) =>
-                    <div className="column">
-                        <i onClick={() => handleChange(value, 'add')} class="fas fa-chevron-up fa-2x"></i>
+                Object.keys(state).sort().map((value, index) =>
+                    <div key={index} className="column">
+                        <i onClick={() => handleChange(value, 'add')} className="fas fa-chevron-up fa-2x"></i>
                         <h3>{state[value]}{value}</h3>
-                        <i onClick={() => handleChange(value, 'sub')} class="fas fa-chevron-down fa-2x"></i>
+                        <i onClick={() => handleChange(value, 'sub')} className="fas fa-chevron-down fa-2x"></i>
                     </div>
                 )
             }
