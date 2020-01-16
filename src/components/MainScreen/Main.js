@@ -15,9 +15,23 @@ import './Main.scss';
 
 function Main() {
 
+    const [degrees, setDegrees] = React.useState(26)
 
-    const [degrees, setDegrees] = React.useState(24)
-
+    function limit(action) {
+        if (action === 0) {
+            if (degrees === 16) {
+                setDegrees(degrees);
+            } else {
+                setDegrees(degrees - 1);
+            }
+        } else {
+            if (degrees === 30) {
+                setDegrees(degrees);
+            } else {
+                setDegrees(degrees + 1);
+            }
+        }
+    }
 
     return (
         <div className="wrapper">
@@ -25,7 +39,7 @@ function Main() {
                 <div className="topbar">
                     <div className="switch">
                         <p>OFF</p>
-                        <ACSwitch/>
+                        <ACSwitch />
                         <p>ON</p>
                     </div>
                     <div>
@@ -53,10 +67,10 @@ function Main() {
                 </div>
                 <div className="temp-controls">
                     <div className="unify">
-                        <div onClick={() => setDegrees(degrees + 1)} className="button plus">
+                        <div onClick={() => limit(1)} className="button plus">
                             <i className="fas fa-plus"></i>
                         </div>
-                        <div onClick={() => setDegrees(degrees - 1)} className="button minus">
+                        <div onClick={() => limit(0)} className="button minus">
                             <i className="fas fa-minus"></i>
                         </div>
                     </div>
@@ -73,7 +87,7 @@ function Main() {
                     <div className="unify">
                         <div className="mode-elements-wrapper">
                             <p>Mode</p>
-                            <ACMode/>
+                            <ACMode />
                         </div>
                     </div>
                 </div>
@@ -81,7 +95,7 @@ function Main() {
                     <div className="unify">
                         <div className="fan-controls-wrapper">
                             <p>Fan speed</p>
-                            <FanSlider/>
+                            <FanSlider />
                         </div>
                     </div>
                 </div>
@@ -89,7 +103,7 @@ function Main() {
                     <div className="unify">
                         <div className="timer-controls-wrapper">
                             <p>Timer</p>
-                            <Timer/>
+                            <Timer />
                             <div className="start-btn">Start</div>
                         </div>
                     </div>
