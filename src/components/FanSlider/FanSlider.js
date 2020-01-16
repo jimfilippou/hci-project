@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 
@@ -49,8 +51,33 @@ function FanSlider() {
         },
     })(Slider);
 
-    return <IOSSlider defaultValue={50} />
+    return (
+        <RelativeWrapper>
+            <SlowLabel />
+            <IOSSlider defaultValue={50} />
+            <FastLabel />
+        </RelativeWrapper>
+    )
 
 }
+
+const RelativeWrapper = styled.div`position: relative;`;
+
+const SlowLabel = styled.small`
+    position: absolute;
+    &::after {
+        content: 'Slow';
+    }
+    bottom: 30px;
+`;
+
+const FastLabel = styled.small`
+    position: absolute;
+    &::after {
+        content: 'Fast';
+    }
+    right: 0;
+    bottom: 30px;
+`;
 
 export default FanSlider;
