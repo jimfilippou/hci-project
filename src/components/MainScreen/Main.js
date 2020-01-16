@@ -104,7 +104,6 @@ function Main() {
                         <div className="timer-controls-wrapper">
                             <p>Timer</p>
                             <Timer />
-                            <div className="start-btn">Start</div>
                         </div>
                     </div>
                 </div>
