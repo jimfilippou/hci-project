@@ -6,7 +6,7 @@ import CTX from './store';
 
 function App() {
   return (
-    <CTX.Provider value={{}}>
+    <CTX.Provider value={{on: true}}>
       {/* <Login/> */}
       <Main/>
     </CTX.Provider>

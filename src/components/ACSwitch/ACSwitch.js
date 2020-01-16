@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import store from '../../store';
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import { green } from '@material-ui/core/colors';
 
 function ACSwitch() {
 
-    const [state, setState] = React.useState({
-        checkedA: true
-    });
+    const context = useContext(store);
+    const [render, setrender] = useState(undefined);
 
     const GreenSwitch = withStyles({
         switchBase: {
@@ -23,15 +23,11 @@ function ACSwitch() {
         track: {},
     })(Switch);
 
-    const handleChange = name => event => {
-        setState({ ...state, [name]: event.target.checked });
-    };
 
     return (
         <GreenSwitch
-            checked={state.checkedB}
-            onChange={handleChange('checkedB')}
-            value="checkedB"
+            checked={context.on}
+            onChange={() => { context.on = !context.on; setrender(render === undefined ? null : undefined) }}
         />
     )
 

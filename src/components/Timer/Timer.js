@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import toast from 'toasted-notes'
-import 'toasted-notes/src/styles.css';
+
 
 export default () => {
 
