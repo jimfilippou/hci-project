@@ -7,16 +7,20 @@ export default () => {
     });
 
     const handleChange = (target, action) => {
+
+        if (state[target] === 0 && action === 'sub') return;
+
         setState({
             ...state,
             [target]: action == 'add' ? state[target] + 1 : state[target] - 1
         });
+
     }
 
     return (
         <div className="outter-parent">
             {
-                Object.keys(state).map((value) =>
+                Object.keys(state).sort().map((value) =>
                     <div className="column">
                         <i onClick={() => handleChange(value, 'add')} class="fas fa-chevron-up fa-2x"></i>
                         <h3>{state[value]}{value}</h3>
