@@ -72,6 +72,9 @@ function Main() {
                         <div onClick={() => limit(1)} className="button plus">
                             <i className="fas fa-plus"></i>
                         </div>
+                        <div className="temp-temp">
+                            <p>TEMP</p>
+                        </div>
                         <div onClick={() => limit(0)} className="button minus">
                             <i className="fas fa-minus"></i>
                         </div>
@@ -79,6 +82,9 @@ function Main() {
                     <div className="unify">
                         <div className="button swing">
                             <img alt="swing up" src={swingUP} />
+                        </div>
+                        <div className="swing-swing">
+                            <p>SWING</p>
                         </div>
                         <div className="button swing">
                             <img alt="swing down" src={swingDown} />
