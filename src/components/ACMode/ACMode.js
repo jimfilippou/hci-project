@@ -9,17 +9,27 @@ export default (props) => {
     const [mode, setMode] = useState('cold');
     const [checked, setChecked] = React.useState(false);
 
+    function fun1(){
+        setMode('warm');
+        document.getElementById("audio").play();
+    }
+
+    function fun2(){
+        setMode('cold');
+        document.getElementById("audio").play();
+    }
+
     return (
         <div>
             <Flex>
                 <Flake
-                    onClick={() => setMode('cold')}
+                    onClick={() => fun2()}
                     active={mode === 'cold' && !checked}
                 >
                     <i className="far fa-snowflake"></i>
                 </Flake>
                 <Fire
-                    onClick={() => setMode('warm')}
+                    onClick={() => fun1()}
                     active={mode === 'warm' && !checked}
                 >
                     <i className="fas fa-fire"></i>

@@ -37,6 +37,10 @@ function Main() {
         }
     }
 
+    function Audio(){
+        document.getElementById("audio").play();
+    }
+
     function turnOnAuto() {
         setprevTemp(degrees);
         setDegrees(26);
@@ -50,7 +54,7 @@ function Main() {
         <div className="wrapper">
             <div className="container">
                 <div className="topbar">
-                    <div className="switch">
+                    <div onClick={() => Audio()} className="switch">
                         <p>OFF</p>
                         <ACSwitch />
                         <p>ON</p>
@@ -91,13 +95,13 @@ function Main() {
                         </div>
                     </div>
                     <div className="unify">
-                        <div className="button swing">
+                        <div onClick={() => Audio()} className="button swing">
                             <img alt="swing up" src={swingUP} />
                         </div>
                         <div className="swing-swing">
                             <p>SWING</p>
                         </div>
-                        <div className="button swing">
+                        <div onClick={() => Audio()} className="button swing">
                             <img alt="swing down" src={swingDown} />
                         </div>
                     </div>
