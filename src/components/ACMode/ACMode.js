@@ -4,7 +4,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { Flex } from '../Common/commons';
 import { Flake, Fire } from './styles';
 
-export default () => {
+export default (props) => {
 
     const [mode, setMode] = useState('cold');
     const [checked, setChecked] = React.useState(false);
@@ -30,7 +30,15 @@ export default () => {
                 control={
                     <Checkbox
                         checked={checked}
-                        onChange={() => setChecked(!checked)}
+                        onChange={() => {
+                            setChecked(!checked);
+                            if (checked) {
+                                props.disable();
+                            } else {
+                                props.enable();
+                            }
+                            
+                        }}
                         color="primary"
                     />
                 }

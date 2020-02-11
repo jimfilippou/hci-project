@@ -18,6 +18,7 @@ import './Main.scss';
 function Main() {
 
     const [degrees, setDegrees] = React.useState(26)
+    const [prevTemp, setprevTemp] = React.useState(undefined)
 
     function limit(action) {
         if (action === 0) {
@@ -33,6 +34,15 @@ function Main() {
                 setDegrees(degrees + 1);
             }
         }
+    }
+
+    function turnOnAuto() {
+        setprevTemp(degrees);
+        setDegrees(26);
+    }
+
+    function turnOffAuto() {
+        setDegrees(prevTemp);
     }
 
     return (
@@ -95,7 +105,10 @@ function Main() {
                     <div className="unify">
                         <div className="mode-elements-wrapper">
                             <p>Mode</p>
-                            <ACMode />
+                            <ACMode 
+                                enable={turnOnAuto} 
+                                disable={turnOffAuto}
+                                />
                         </div>
                     </div>
                 </div>
