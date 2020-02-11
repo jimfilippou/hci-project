@@ -21,6 +21,7 @@ function Main() {
     const [prevTemp, setprevTemp] = React.useState(undefined)
 
     function limit(action) {
+        document.getElementById("audio").play();
         if (action === 0) {
             if (degrees === 16) {
                 setDegrees(degrees);
