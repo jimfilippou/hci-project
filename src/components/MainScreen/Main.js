@@ -127,7 +127,7 @@ function Main() {
                 </div>
                 <div className="timer">
                     <div className="unify">
-                        <div className="timer-controls-wrapper">
+                        <div onClick={() => Audio()} className="timer-controls-wrapper">
                             <p>Timer</p>
                             <Timer />
                         </div>
