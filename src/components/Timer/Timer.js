@@ -12,6 +12,7 @@ export default () => {
     const handleChange = (target, action) => {
 
         if (state[target] === 0 && action === 'sub') return;
+        if (state[target] === 59 && action === 'add') return;
 
         setState({
             ...state,
