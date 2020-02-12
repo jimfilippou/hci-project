@@ -22,7 +22,7 @@ export default () => {
     }
 
     return (
-        <div>
+        <div style={{ paddingLeft: '5px', paddingRight: '5px' }}>
             <div className="outter-parent">
                 {
                     Object.keys(state).sort().map((value, index) =>

@@ -4,7 +4,7 @@ import anna from '../../assets/images/main/anna.svg';
 import swingUP from '../../assets/images/main/swing/up.svg';
 import swingDown from '../../assets/images/main/swing/down.svg';
 
-import store from '../../store';
+// import store from '../../store';
 
 // Import custom components
 import FanSlider from '../FanSlider/FanSlider';
