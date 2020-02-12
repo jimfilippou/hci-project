@@ -5,11 +5,13 @@ import Switch from '@material-ui/core/Switch';
 import { green } from '@material-ui/core/colors';
 
 function ACSwitch() {
+    
 
     const context = useContext(store);
     const [render, setrender] = useState(undefined);
 
     const GreenSwitch = withStyles({
+        
         switchBase: {
             color: green[300],
             '&$checked': {
