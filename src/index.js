@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './assets/styles/core.scss';
 import 'toasted-notes/src/styles.css';
 
 import App from './App';
