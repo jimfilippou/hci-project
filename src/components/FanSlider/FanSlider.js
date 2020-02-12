@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
